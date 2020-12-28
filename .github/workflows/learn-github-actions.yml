@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo $GITHUB_RUN_ID
+      - run: echo $GITHUB_ACTION
+      - run: echo $GITHUB_RUN_NUMBER
