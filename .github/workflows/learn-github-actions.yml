@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  test:
     runs-on: ubuntu-latest
     env:
       ACTION_SECRET: ${{ secrets.ACTION_SECRET }}
@@ -14,4 +14,9 @@ jobs:
       - run: ls
       - name: ls
         run: cd test && ls
-
+      - name: set var
+        run: $VAR="ENV VAR"
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $VAR
