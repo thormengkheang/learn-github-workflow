@@ -10,6 +10,7 @@ jobs:
       - run: echo $ACTION_SECRET
       - run: echo $GITHUB_ACTION
       - run: echo $GITHUB_RUN_NUMBER
+      - uses: actions/checkout@v2
       - run: ls
       - name: ls
         working-directory: ./test
