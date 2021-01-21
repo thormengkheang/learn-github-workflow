@@ -16,8 +16,5 @@ jobs:
         run: cd test && ls
       - name: set var
         run: export VAR="ENV VAR"
-  test2:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
       - run: echo $VAR
+      - run: ./test/test.sh
