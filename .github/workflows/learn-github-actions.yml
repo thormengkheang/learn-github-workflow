@@ -15,6 +15,6 @@ jobs:
       - name: ls
         run: cd test && ls
       - name: set var
-        run: export VAR="ENV VAR"
+        run: echo "VAR=yellow" >> $GITHUB_ENV
       - run: echo $VAR
       - run: ./test/test.sh
