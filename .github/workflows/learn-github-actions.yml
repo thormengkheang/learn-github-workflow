@@ -11,4 +11,7 @@ jobs:
       - run: echo $GITHUB_ACTION
       - run: echo $GITHUB_RUN_NUMBER
       - run: ls
-      - run: cd ./test && ls
+      - name: ls
+        working-directory: ./test
+        run: ls
+
