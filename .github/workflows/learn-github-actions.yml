@@ -17,7 +17,7 @@ jobs:
       - name: set var
         run: export VAR="ENV VAR"
   test2:
-    needs: test1
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - run: echo $VAR
