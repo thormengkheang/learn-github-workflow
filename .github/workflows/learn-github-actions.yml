@@ -3,6 +3,8 @@ on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
+    env:
+      ACTION_SECRET: ${{ secrets.ACTION_SECRET }}
     steps:
       - run: echo $GITHUB_RUN_ID
       - run: echo $ACTION_SECRET
