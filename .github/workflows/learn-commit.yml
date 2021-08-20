@@ -1,0 +1,20 @@
+name: learn-github-actions
+on:
+  push:
+    branches:
+      - learn_commit_action
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm config set git-tag-version false
+      - run: npm version patch
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: './package.json'
+          author_name: 'thormengkheang'
+          author_email: 'thormengkheang@gmail.com'
+          default_author: 'user_info'
+          message: 'bump version'
